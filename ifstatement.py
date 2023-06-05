@@ -1,5 +1,6 @@
+#code to find largest number
 # Prompt the user to input three numbers
-""""num1 = float(input("Enter the first number: "))
+num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 num3 = float(input("Enter the third number: "))
 
@@ -12,9 +13,10 @@ else:
     largest = num3
 
 # Print the largest number
-print("The largest number is:", largest)"""
+print("The largest number is:", largest)
 
 
+#code to find eligible employee to give bonus
     # Prompt the user to input salary and years of service
 salary = float(input("Enter the employee's salary: "))
 years_of_service = int(input("Enter the years of service: "))
