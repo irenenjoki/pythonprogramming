@@ -1,18 +1,4 @@
 #create a class called book
-class Book:
-    def __init__(self, title, author, publication_year):
-        self.title = title
-        self.author = author
-        self.publication_year = publication_year
-    def display_info(self):
-        print("Title:", self.title)
-        print("Author:", self.author)
-        print("Publication Year:", self.publication_year)
-title=input("input book title\n")
-author=input("input book author\n")
-publication_year=int(input("enter publication year\n"))
-book_object = Book(title, author, publication_year)
-#create a class called LibraryMember
 class LibraryMember:
     def __init__(self, member_id, name):
         self.member_id = member_id
@@ -35,9 +21,26 @@ name=input("input member name\n")
 num_book=int(input("input number of books borrowed\n"))
 # Create library member object
 member = LibraryMember(member_id, name)
+class Book(LibraryMember):
+    def __init__(self, title, author, publication_year,member_id, name):
+        self.title = title
+        self.author = author
+        self.publication_year = publication_year
+        self.member_id = member_id
+        self.name = name
+    def display_info(self):
+        print("Title:", self.title)
+        print("Author:", self.author)
+        print("Publication Year:", self.publication_year)
+title=input("input book title\n")
+author=input("input book author\n")
+publication_year=int(input("enter publication year\n"))
+book_object = Book(title, author, publication_year,member_id,name)
+#create a class called LibraryMember
+
 # Borrow books
 for _ in range(num_book):
-    member.borrow_book(Book(title, author, publication_year))
+    member.borrow_book(Book(title, author, publication_year,member_id,name))
 # Display member information
 book_object.display_info()
 # Return a book
